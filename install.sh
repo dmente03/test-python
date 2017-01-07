@@ -13,13 +13,10 @@ sudo apt-get install mysql-server libmysqlclient-dev python-mysqldb
 sudo $EDITOR $PWD/mysite/settings.py
 
 #Criando ambiente virtual
-python -m venv venvapp
-
-#As vezes é necessário
-virtualenv --python=python venvapp
+virtualenv .
 
 #Ativando ambiente virtual 
-source venvapp/bin/activate
+source bin/activate
 
 #Instalando o Django
 pip install django==1.8.5
