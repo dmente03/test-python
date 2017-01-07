@@ -10,8 +10,13 @@ sudo apt-get install build-essential python-dev python-virtualenv python-pip ngi
 #Intalando banco de dados MySQL
 sudo apt-get install mysql-server libmysqlclient-dev python-mysqldb
 
+#Definição de diretório base
+BASE=$PWD
+
 #Edição de usuário e senha de banco de dados
-sudo vi $PWD/mysite/settings.py
+sudo vi $BASE/mysite/settings.py
+
+cd $BASE
 
 #Criando ambiente virtual
 virtualenv venvapp
@@ -41,11 +46,11 @@ python manage.py migrate
 python manage.py createsuperuser
 
 #Copiar nossa configuração de Nginx para o diretório do aplicativo
-sudo cp $PWD/nginx.conf /etc/nginx/sites-enabled/
+sudo mv /etc/nginx/sites-enabled/default /etc/nginx/sites-enabled/default.bkp
+sudo cp $BASE/config/nginx.conf /etc/nginx/sites-enabled/default
 
 #Reiniciando Nginx
 sudo service nginx restart
 
 #Iniciando aplicação
 ./start.sh
-sudo service nginx restart
