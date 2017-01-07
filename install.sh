@@ -10,7 +10,7 @@ sudo apt-get install build-essential python-dev python-virtualenv python-pip ngi
 sudo apt-get install mysql-server libmysqlclient-dev python-mysqldb
 
 #Edição de usuário e senha de banco de dados
-sudo $EDITOR $PWD/mysite/settings.py
+sudo vi $PWD/mysite/settings.py
 
 #Criando ambiente virtual
 virtualenv .
