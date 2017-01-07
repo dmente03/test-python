@@ -1,4 +1,5 @@
 #!/bin/bash
+export LC_ALL="pt_BR.UTF-8"
 
 sudo apt-get update
 sudo apt-get upgrade
@@ -13,10 +14,10 @@ sudo apt-get install mysql-server libmysqlclient-dev python-mysqldb
 sudo vi $PWD/mysite/settings.py
 
 #Criando ambiente virtual
-virtualenv .
+virtualenv venvapp
 
 #Ativando ambiente virtual 
-source bin/activate
+source venvapp/bin/activate
 
 #Instalando o Django
 pip install django==1.8.5
