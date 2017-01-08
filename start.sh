@@ -18,7 +18,7 @@ NUM_WORKERS=3
 ADDRESS=localhost:8000
 
 # Ativando ambiente virtual e executando o gunicorn para este projeto
-source $BASE/myvenv/bin/activate
+source $BASE/venvapp/bin/activate
 
 cd $BASE
 test -d $LOGDIR || mkdir -p $LOGDIR
