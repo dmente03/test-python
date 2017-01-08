@@ -13,6 +13,9 @@ sudo apt-get install mysql-server libmysqlclient-dev python-mysqldb
 #Definição de diretório base
 BASE=$PWD
 
+#Criando bando de dados
+mysql -uroot -p -v -e 'CREATE DATABASE django CHARACTER SET utf8 COLLATE utf8_general_ci;'
+
 #Edição de usuário e senha de banco de dados
 sudo vi $BASE/mysite/settings.py
 
