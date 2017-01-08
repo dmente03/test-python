@@ -45,6 +45,9 @@ python manage.py migrate
 #Criando usário master
 python manage.py createsuperuser
 
+#Criando arquivo de configuração do nginx apontando para diretório da instalação da aplicação
+source nginx.sh
+
 #Copiar nossa configuração de Nginx para o diretório do aplicativo
 sudo mv /etc/nginx/sites-enabled/default /etc/nginx/sites-enabled/default.bkp
 sudo cp $BASE/config/nginx.conf /etc/nginx/sites-enabled/default
