@@ -36,7 +36,7 @@ pip install gunicorn
 #Instalando coletor de arquivos estáticos
 pip install django whitenoise
 
-#Agrupando estáticos
+#Agrupando arquivos estáticos
 python manage.py collectstatic
 
 #Migrando banco
